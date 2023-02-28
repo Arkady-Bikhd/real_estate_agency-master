@@ -28,7 +28,10 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 
     'property.apps.PropertyConfig',
+    "phonenumber_field",
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -99,4 +102,6 @@ DATABASES = {
     'default': dj_database_url.parse(
         os.getenv('DATABASE', 'sqlite:///db.sqlite3')
     ),
+
 }
+
