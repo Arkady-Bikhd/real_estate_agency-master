@@ -7,7 +7,7 @@ def fill_new_buildings(apps, schema_editor):
 
     Flat = apps.get_model('property', 'Flat')
     Flat.objects.filter(construction_year__gte=2015).update(new_buildings=True)
-    Flat.objects.filter(construction_year__lte=2015).update(new_buildings=False)
+    Flat.objects.filter(construction_year__lt=2015).update(new_buildings=False)
 
 
 class Migration(migrations.Migration):
